@@ -26,10 +26,10 @@ public class SortDialog extends JDialog {
 	private final JPanel pnlCenter = new JPanel();
 	private JButton okButton;
 	private JButton cancelButton;
-	private JTextField txtXCoord;
-	private JTextField txtYCoord;
-	private JTextField txtWidth;
-	private JTextField txtHeight;
+	private JTextField textX;
+	private JTextField textY;
+	private JTextField textWidth;
+	private JTextField textHeight;
 	
 
 	/**
@@ -57,8 +57,8 @@ public class SortDialog extends JDialog {
 		pnlCenter.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(pnlCenter, BorderLayout.CENTER);
 		
-		txtXCoord = new JTextField();
-		txtXCoord.addKeyListener(new KeyAdapter() {
+		textX = new JTextField();
+		textX.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyTyped(KeyEvent e) {
 				char c = e.getKeyChar();
@@ -68,10 +68,10 @@ public class SortDialog extends JDialog {
 				}
 			}
 		});
-		txtXCoord.setColumns(10);
+		textX.setColumns(10);
 		
-		txtYCoord = new JTextField();
-		txtYCoord.addKeyListener(new KeyAdapter() {
+		textY = new JTextField();
+		textY.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyTyped(KeyEvent e) {
 				char c = e.getKeyChar();
@@ -81,10 +81,10 @@ public class SortDialog extends JDialog {
 				}
 			}
 		});
-		txtYCoord.setColumns(10);
+		textY.setColumns(10);
 		
-		txtWidth = new JTextField();
-		txtWidth.addKeyListener(new KeyAdapter() {
+		textWidth = new JTextField();
+		textWidth.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyTyped(KeyEvent e) {
 				char c = e.getKeyChar();
@@ -94,10 +94,10 @@ public class SortDialog extends JDialog {
 				}
 			}
 		});
-		txtWidth.setColumns(10);
+		textWidth.setColumns(10);
 		
-		txtHeight = new JTextField();
-		txtHeight.addKeyListener(new KeyAdapter() {
+		textHeight = new JTextField();
+		textHeight.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyTyped(KeyEvent e) {
 				char c = e.getKeyChar();
@@ -107,31 +107,31 @@ public class SortDialog extends JDialog {
 				}
 			}
 		});
-		txtHeight.setColumns(10);
+		textHeight.setColumns(10);
 		
-		JLabel lblNewLabel = new JLabel("x:");
+		JLabel x = new JLabel("x:");
 		
-		JLabel lblNewLabel_1 = new JLabel("y:");
+		JLabel y = new JLabel("y:");
 		
-		JLabel lblNewLabel_2 = new JLabel("Width:");
+		JLabel width = new JLabel("Width:");
 		
-		JLabel lblNewLabel_3 = new JLabel("Height:");
+		JLabel height = new JLabel("Height:");
 		GroupLayout gl_pnlCenter = new GroupLayout(pnlCenter);
 		gl_pnlCenter.setHorizontalGroup(
 			gl_pnlCenter.createParallelGroup(Alignment.TRAILING)
 				.addGroup(gl_pnlCenter.createSequentialGroup()
 					.addGap(29)
 					.addGroup(gl_pnlCenter.createParallelGroup(Alignment.LEADING)
-						.addComponent(lblNewLabel_2, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblNewLabel_3, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblNewLabel_1)
-						.addComponent(lblNewLabel, GroupLayout.DEFAULT_SIZE, 64, Short.MAX_VALUE))
+						.addComponent(width, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE)
+						.addComponent(height, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE)
+						.addComponent(y)
+						.addComponent(x, GroupLayout.DEFAULT_SIZE, 64, Short.MAX_VALUE))
 					.addPreferredGap(ComponentPlacement.RELATED)
 					.addGroup(gl_pnlCenter.createParallelGroup(Alignment.LEADING)
-						.addComponent(txtHeight, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(txtWidth, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(txtYCoord, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(txtXCoord, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+						.addComponent(textHeight, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(textWidth, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(textY, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(textX, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 					.addGap(76))
 		);
 		gl_pnlCenter.setVerticalGroup(
@@ -139,20 +139,20 @@ public class SortDialog extends JDialog {
 				.addGroup(gl_pnlCenter.createSequentialGroup()
 					.addGap(47)
 					.addGroup(gl_pnlCenter.createParallelGroup(Alignment.BASELINE)
-						.addComponent(txtXCoord, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblNewLabel))
+						.addComponent(textX, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(x))
 					.addGap(34)
 					.addGroup(gl_pnlCenter.createParallelGroup(Alignment.BASELINE)
-						.addComponent(txtYCoord, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblNewLabel_1))
+						.addComponent(textY, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(y))
 					.addGap(34)
 					.addGroup(gl_pnlCenter.createParallelGroup(Alignment.BASELINE)
-						.addComponent(txtWidth, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblNewLabel_2))
+						.addComponent(textWidth, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(width))
 					.addGap(35)
 					.addGroup(gl_pnlCenter.createParallelGroup(Alignment.BASELINE)
-						.addComponent(txtHeight, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblNewLabel_3))
+						.addComponent(textHeight, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(height))
 					.addContainerGap(102, Short.MAX_VALUE))
 		);
 		pnlCenter.setLayout(gl_pnlCenter);
@@ -164,9 +164,9 @@ public class SortDialog extends JDialog {
 				okButton.setBackground(new Color(205, 133, 63));
 				okButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						if(txtXCoord.getText().trim().isEmpty() ||
-								txtYCoord.getText().trim().isEmpty() || txtWidth.getText().trim().isEmpty()
-								|| txtHeight.getText().trim().isEmpty()) {
+						if(textX.getText().trim().isEmpty() ||
+								textY.getText().trim().isEmpty() || textWidth.getText().trim().isEmpty()
+								|| textHeight.getText().trim().isEmpty()) {
 									isOk = false;
 									getToolkit().beep();
 								JOptionPane.showMessageDialog(null, "Fill in all the blanks!", "Error",
@@ -223,35 +223,35 @@ public class SortDialog extends JDialog {
 	}
 
 	public JTextField getTxtXCoord() {
-		return txtXCoord;
+		return textX;
 	}
 
 	public void setTxtXCoord(JTextField txtXCoord) {
-		this.txtXCoord = txtXCoord;
+		this.textX = txtXCoord;
 	}
 
 	public JTextField getTxtYCoord() {
-		return txtYCoord;
+		return textY;
 	}
 
 	public void setTxtYCoord(JTextField txtYCoord) {
-		this.txtYCoord = txtYCoord;
+		this.textY = txtYCoord;
 	}
 
 	public JTextField getTxtWidth() {
-		return txtWidth;
+		return textWidth;
 	}
 
 	public void setTxtWidth(JTextField txtWidth) {
-		this.txtWidth = txtWidth;
+		this.textWidth = txtWidth;
 	}
 
 	public JTextField getTxtHeight() {
-		return txtHeight;
+		return textHeight;
 	}
 
 	public void setTxtHeight(JTextField txtHeight) {
-		this.txtHeight = txtHeight;
+		this.textHeight = txtHeight;
 	}
 	
 

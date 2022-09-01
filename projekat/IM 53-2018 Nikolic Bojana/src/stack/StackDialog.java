@@ -126,7 +126,7 @@ public class StackDialog extends JDialog {
 		JLabel width = new JLabel("width:");
 		width.setHorizontalAlignment(SwingConstants.LEFT);
 		
-		JLabel lblHeight = new JLabel("height:");
+		JLabel height = new JLabel("height:");
 		GroupLayout gl_pnlCenter = new GroupLayout(pnlCenter);
 		gl_pnlCenter.setHorizontalGroup(
 			gl_pnlCenter.createParallelGroup(Alignment.LEADING)
@@ -138,7 +138,7 @@ public class StackDialog extends JDialog {
 							.addGap(47))
 						.addGroup(Alignment.LEADING, gl_pnlCenter.createSequentialGroup()
 							.addGroup(gl_pnlCenter.createParallelGroup(Alignment.TRAILING, false)
-								.addComponent(lblHeight, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+								.addComponent(height, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 								.addComponent(width, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
 							.addPreferredGap(ComponentPlacement.RELATED))
 						.addGroup(Alignment.LEADING, gl_pnlCenter.createSequentialGroup()
@@ -173,7 +173,7 @@ public class StackDialog extends JDialog {
 					.addPreferredGap(ComponentPlacement.UNRELATED)
 					.addGroup(gl_pnlCenter.createParallelGroup(Alignment.BASELINE)
 						.addComponent(textHeight, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblHeight, GroupLayout.PREFERRED_SIZE, 26, GroupLayout.PREFERRED_SIZE))
+						.addComponent(height, GroupLayout.PREFERRED_SIZE, 26, GroupLayout.PREFERRED_SIZE))
 					.addContainerGap(70, Short.MAX_VALUE))
 		);
 		pnlCenter.setLayout(gl_pnlCenter);

@@ -64,9 +64,9 @@ public class StackFrame extends JFrame {
 		JPanel pnlDown = new JPanel();
 		contentPane.add(pnlDown, BorderLayout.SOUTH);
 		
-		JButton btnAdd = new JButton("Add");
-		btnAdd.setBackground(new Color(189, 183, 107));
-		btnAdd.addActionListener(new ActionListener() {
+		JButton buttonAdd = new JButton("Add");
+		buttonAdd.setBackground(new Color(189, 183, 107));
+		buttonAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				StackDialog stackdlg = new StackDialog();
 				stackdlg.setVisible(true);
@@ -86,12 +86,11 @@ public class StackFrame extends JFrame {
 			}
 		});
 	
-	//	StackDialog stackDialog = new StackDialog();
-		//stackDialog.setVisible(true);
+
 		
-		JButton btnRemove = new JButton("Remove");
-		btnRemove.setBackground(new Color(189, 183, 107));
-		btnRemove.addActionListener(new ActionListener() {
+		JButton buttonRemove = new JButton("Remove");
+		buttonRemove.setBackground(new Color(189, 183, 107));
+		buttonRemove.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (dlm.isEmpty()) {
 					JOptionPane.showMessageDialog(null, "Nothing to remove","Error",
@@ -141,14 +140,14 @@ public class StackFrame extends JFrame {
 			gl_pnlDown.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_pnlDown.createSequentialGroup()
 					.addGap(180)
-					.addComponent(btnAdd)
+					.addComponent(buttonAdd)
 					.addGap(55)
-					.addComponent(btnRemove))
+					.addComponent(buttonRemove))
 		);
 		gl_pnlDown.setVerticalGroup(
 			gl_pnlDown.createParallelGroup(Alignment.LEADING)
-				.addComponent(btnAdd)
-				.addComponent(btnRemove)
+				.addComponent(buttonAdd)
+				.addComponent(buttonRemove)
 		);
 		pnlDown.setLayout(gl_pnlDown);
 		

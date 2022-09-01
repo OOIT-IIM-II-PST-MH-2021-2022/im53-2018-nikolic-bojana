@@ -46,7 +46,6 @@ public class SortFrame extends JFrame {
 			}
 		});
 	}
-
 	
 	public SortFrame() {
 		setTitle("IM53-2018 Nikolic Bojana");

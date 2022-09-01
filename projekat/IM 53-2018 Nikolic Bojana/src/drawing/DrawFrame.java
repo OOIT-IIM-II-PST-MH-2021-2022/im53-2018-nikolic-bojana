@@ -45,11 +45,12 @@ public class DrawFrame extends JFrame {
 	 * Create the frame.
 	 */
 	public DrawFrame() {
-		setBackground(UIManager.getColor("Button.select"));
+		setBackground(new Color(221, 160, 221));
 		setTitle("IM53-2018 Nikolic Bojana");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 899, 564);
+		setBounds(100, 100, 880, 622);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(221, 160, 221));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
@@ -58,11 +59,11 @@ public class DrawFrame extends JFrame {
 		contentPane.add(pnlDrawing,BorderLayout.CENTER);
 		
 		JPanel pnlButton = new JPanel();
-		pnlButton.setBackground(UIManager.getColor("Button.shadow"));
+		pnlButton.setBackground(new Color(188, 143, 143));
 		contentPane.add(pnlButton, BorderLayout.EAST);
 		
 		JButton btnPoint = new JButton("Point");
-		btnPoint.setBackground(UIManager.getColor("RadioButton.darkShadow"));
+		btnPoint.setBackground(new Color(189, 183, 107));
 		btnPoint.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				PnlDrawing.obj = 1;
@@ -73,6 +74,7 @@ public class DrawFrame extends JFrame {
 		});
 		
 		JButton btnLine = new JButton("Line");
+		btnLine.setBackground(new Color(189, 183, 107));
 		btnLine.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				PnlDrawing.obj = 2;
@@ -83,6 +85,7 @@ public class DrawFrame extends JFrame {
 		});
 		
 		JButton btnRectangle = new JButton("Rectangle");
+		btnRectangle.setBackground(new Color(189, 183, 107));
 		btnRectangle.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				PnlDrawing.obj = 3;
@@ -93,6 +96,7 @@ public class DrawFrame extends JFrame {
 		});
 		
 		JButton btnCircle = new JButton("Circle");
+		btnCircle.setBackground(new Color(189, 183, 107));
 		btnCircle.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				PnlDrawing.obj = 4;
@@ -103,6 +107,7 @@ public class DrawFrame extends JFrame {
 		});
 		
 		JButton btnDonut = new JButton("Donut");
+		btnDonut.setBackground(new Color(189, 183, 107));
 		btnDonut.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				PnlDrawing.obj = 5;
@@ -113,6 +118,7 @@ public class DrawFrame extends JFrame {
 		});
 		
 		JButton btnSelect = new JButton("Select");
+		btnSelect.setBackground(new Color(128, 128, 0));
 		btnSelect.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if(PnlDrawing.shapesArrList.isEmpty()) {
@@ -125,6 +131,7 @@ public class DrawFrame extends JFrame {
 		});
 		
 		JButton btnModify = new JButton("Modify");
+		btnModify.setBackground(new Color(128, 128, 0));
 		btnModify.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(PnlDrawing.shapesArrList.isEmpty()) {
@@ -143,6 +150,7 @@ public class DrawFrame extends JFrame {
 		});
 		
 		JButton btnDelete = new JButton("Delete");
+		btnDelete.setBackground(new Color(128, 128, 0));
 		btnDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if(PnlDrawing.shapesArrList.isEmpty()) {
@@ -166,6 +174,7 @@ public class DrawFrame extends JFrame {
 		});
 		
 		JButton btnOutlineColor = new JButton("Outline Color");
+		btnOutlineColor.setBackground(new Color(128, 128, 0));
 		btnOutlineColor.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				outline = JColorChooser.showDialog(null, "Choose a color", Color.BLACK);
@@ -176,6 +185,7 @@ public class DrawFrame extends JFrame {
 		});
 		
 		JButton btnAreaColor = new JButton("Area Color");
+		btnAreaColor.setBackground(new Color(128, 128, 0));
 		btnAreaColor.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				area = JColorChooser.showDialog(null, "Choose a color", Color.WHITE);
@@ -188,7 +198,7 @@ public class DrawFrame extends JFrame {
 		GroupLayout gl_pnlButton = new GroupLayout(pnlButton);
 		gl_pnlButton.setHorizontalGroup(
 			gl_pnlButton.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_pnlButton.createSequentialGroup()
+				.addGroup(Alignment.TRAILING, gl_pnlButton.createSequentialGroup()
 					.addContainerGap()
 					.addGroup(gl_pnlButton.createParallelGroup(Alignment.LEADING)
 						.addComponent(btnModify, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
@@ -197,18 +207,18 @@ public class DrawFrame extends JFrame {
 						.addComponent(btnCircle, GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
 						.addComponent(btnRectangle, GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
 						.addComponent(btnLine, GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
-						.addComponent(btnPoint, GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
 						.addComponent(btnDelete, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
-						.addComponent(btnOutlineColor, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-						.addComponent(btnAreaColor, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE))
+						.addComponent(btnOutlineColor, GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
+						.addComponent(btnAreaColor, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
+						.addComponent(btnPoint, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE))
 					.addContainerGap())
 		);
 		gl_pnlButton.setVerticalGroup(
-			gl_pnlButton.createParallelGroup(Alignment.LEADING)
-				.addGroup(Alignment.TRAILING, gl_pnlButton.createSequentialGroup()
-					.addContainerGap()
+			gl_pnlButton.createParallelGroup(Alignment.TRAILING)
+				.addGroup(gl_pnlButton.createSequentialGroup()
+					.addContainerGap(103, Short.MAX_VALUE)
 					.addComponent(btnPoint)
-					.addPreferredGap(ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+					.addGap(18)
 					.addComponent(btnLine)
 					.addGap(18)
 					.addComponent(btnRectangle)
@@ -226,7 +236,7 @@ public class DrawFrame extends JFrame {
 					.addComponent(btnOutlineColor)
 					.addGap(18)
 					.addComponent(btnAreaColor)
-					.addGap(58))
+					.addGap(100))
 		);
 		pnlButton.setLayout(gl_pnlButton);
 	}
