@@ -66,7 +66,7 @@ public class DrawFrame extends JFrame {
 		btnPoint.setBackground(new Color(189, 183, 107));
 		btnPoint.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				PnlDrawing.obj = 1;
+				PnlDrawing.obj = Shapes.POINT;
 				for (Shape shape : PnlDrawing.shapesArrList) {
 					shape.setSelected(false);
 				}
@@ -77,7 +77,7 @@ public class DrawFrame extends JFrame {
 		btnLine.setBackground(new Color(189, 183, 107));
 		btnLine.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				PnlDrawing.obj = 2;
+				PnlDrawing.obj = Shapes.LINE;
 				for (Shape shape : PnlDrawing.shapesArrList) {
 					shape.setSelected(false);
 				}
@@ -88,7 +88,7 @@ public class DrawFrame extends JFrame {
 		btnRectangle.setBackground(new Color(189, 183, 107));
 		btnRectangle.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				PnlDrawing.obj = 3;
+				PnlDrawing.obj = Shapes.RECTANGLE;
 				for (Shape shape : PnlDrawing.shapesArrList) {
 					shape.setSelected(false);
 				}
@@ -99,7 +99,7 @@ public class DrawFrame extends JFrame {
 		btnCircle.setBackground(new Color(189, 183, 107));
 		btnCircle.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				PnlDrawing.obj = 4;
+				PnlDrawing.obj = Shapes.CIRCLE;
 				for (Shape shape : PnlDrawing.shapesArrList) {
 					shape.setSelected(false);
 				}
@@ -110,7 +110,7 @@ public class DrawFrame extends JFrame {
 		btnDonut.setBackground(new Color(189, 183, 107));
 		btnDonut.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				PnlDrawing.obj = 5;
+				PnlDrawing.obj = Shapes.DONUT;
 				for (Shape shape : PnlDrawing.shapesArrList) {
 					shape.setSelected(false);
 				}
@@ -125,7 +125,7 @@ public class DrawFrame extends JFrame {
 					JOptionPane.showMessageDialog(null, "Nothing to select!", "Information", JOptionPane.INFORMATION_MESSAGE);
 					return;
 				} else {
-					PnlDrawing.obj = 6;
+					PnlDrawing.obj = Shapes.SELECT;
 				}
 			}
 		});
@@ -141,7 +141,7 @@ public class DrawFrame extends JFrame {
 				}
 				for(Shape shape : PnlDrawing.shapesArrList) {
 					if(shape.isSelected()) {
-						PnlDrawing.obj = 1;
+						PnlDrawing.obj = Shapes.POINT;
 						shape.DialogEdit();
 						return;
 						}
